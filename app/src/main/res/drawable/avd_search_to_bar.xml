@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/search">
+    <!--propertyName是trimPathStart，表示这是一个trimPath类型的动画（还有trimPathEnd，方向相反）。-->
+    <!--trimPath的原理是从一段path上裁剪出一小部分显示，通过改变裁剪的长度，形成一个渐变的动画-->
+    <target android:name="search">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:valueFrom="0"
+                android:valueTo="1"
+                android:valueType="floatType"
+                android:duration="1000"  />
+        </aapt:attr>
+    </target>
+
+    <target android:name="bar">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:propertyName="trimPathStart"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType"
+                android:duration="1000" />
+        </aapt:attr>
+    </target>
+</animated-vector>

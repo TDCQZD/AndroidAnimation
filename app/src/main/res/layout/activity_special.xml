@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="oldSpecial"
+        android:text="传统转场"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Explode"
+        android:text="Explode"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Slide"
+        android:text="Slide"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Fade"
+        android:text="Fade"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/fab_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="Share"
+        android:text="Share"
+        android:transitionName="share"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="typical"
+        android:text="典型应用" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/fab_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@mipmap/ic_launcher"
+            android:elevation="5dp"
+            android:onClick="explode"
+            android:transitionName="fab" />
+
+        <TextView
+            android:id="@+id/tx_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Android"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:elevation="5dp"
+            android:transitionName="user_name"
+            android:textColor="#353535"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

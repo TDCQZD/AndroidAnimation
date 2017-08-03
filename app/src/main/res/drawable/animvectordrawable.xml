@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/vectordrawable">
+    <!--animated-vector规定，可以有多个动画同时进行，但是一个对象上只能加载一个动画。-->
+    <!--上面的例子可以看到三条线图形转变成箭头图形，同时旋转360度，那就要有两个动画，一个做path变换，一个做旋转。-->
+    <!--但是两个动画不能同时放在一个对象上，所以必须用group包一层，把path变换动画放在path对象上，把旋转动画放在group对象上，从而实现整体的效果。-->
+
+    <!--<target-->
+    <!--android:name="rotationGroup"-->
+    <!--android:animation="@anim/rotation" />-->
+
+    <!--<target-->
+    <!--android:name="v"-->
+    <!--android:animation="@anim/path_morph"-->
+    <!--/>-->
+    <target android:name="rotationGroup">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1500"
+                android:propertyName="rotation"
+                android:valueFrom="0"
+                android:valueTo="360" />
+        </aapt:attr>
+    </target>
+    <target android:name="v">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="1500"
+                android:propertyName="pathData"
+                android:valueFrom="M10,10 L60,10 L60,20 L10,20 Z M10,30 L60,30 L60,40 L10,40 Z M10,50 L60,50 L60,60 L10,60 Z"
+                android:valueTo="M5,35 L40,0 L47.072,7.072 L12.072,42.072 Z M10,30 L60,30 L60,40 L10,40 Z M12.072,27.928 L47.072,62.928 L40,70 L5,35 Z"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--第一个item指定的是state_on时显示的样子，第二个item指定的是state_off时显示的样子。-->
+    <!--第一个transition指定的是从off切换到on时所做的动画，第二个transition指定的是从on切换到off时所做的动画-->
+    <item android:id="@+id/state_on"
+        android:drawable="@drawable/ic_twitter"
+        android:state_checked="true"/>
+
+    <item android:id="@+id/state_off"
+        android:drawable="@drawable/ic_heart" />
+
+    <transition
+        android:fromId="@id/state_off"
+        android:toId="@id/state_on"
+        android:drawable="@drawable/avd_heart_to_twitter" />
+
+    <transition
+        android:fromId="@id/state_on"
+        android:toId="@id/state_off"
+        android:drawable="@drawable/avd_twitter_to_heart" />
+</animated-selector>
